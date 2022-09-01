@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Heart</title>
+    <link rel="icon" type="image/x-icon" href="./images/Heart.png">
+</head>
+<body>
+    <header>
+        <h1>Health Heart Prediction Model</h1>
+    </header>
+    <main>
+        <form action="http://192.168.1.11:5000/predict" method="POST">
+            <p>
+                <label for="first">Age:</label>
+                <input id="first" name="age" placeholder="Ex: 50" required="required">
+            </p>
+            <p>
+                <label for="second">Sex:</label>
+                <select id="second" name="sex" required="required">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </p>
+            <p>
+                <label for="third">Chest Pain Type:</label>
+                <select id="third" name="cp" required="required">
+                    <option value="0">typical angina</option>
+                    <option value="1">atypical angina</option>
+                    <option value="2">non-anginal pain</option>
+                    <option value="3">asymptomatic</option>
+                </select>
+            </p>
+            <p>
+                <label for="fourth">Resting Blood Pressure:</label>
+                <input id="fourth" name="trtbps" placeholder="Ex: 130" required="required">
+            </p>
+            <p>
+                <label for="fifth">Cholestoral fetched via BMI Sensor:</label>
+                <input id="fifth" name="chol" placeholder="Ex: 250" required="required">
+            </p>
+            <p>
+                <label for="sixth">Fasting Blood Sugar > 120 mg/dl?:</label>
+                <select id="sixth" name="fbs" required="required">
+                    <option value="0">False</option>
+                    <option value="1">True</option>
+                </select>
+            </p>
+            <p>
+                <label for="seventh">Resting Electrocardiographic Results:</label>
+                <select id="seventh" name="restecg" required="required">
+                    <option value="0">Normal</option>
+                    <option value="1">Having ST-T wave Abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+                    <option value="2">Showing Probable or Definite Left Ventricular Hypertophy by Estes' criteria</option>
+                </select>
+            </p>
+            <p>
+                <label for="eighth">Maximum Heart Rate Achieved:</label>
+                <input id="eighth" name="thalach" placeholder="Ex: 150" required="required">
+            </p>
+            <p>
+                <label for="ninth">Exercise induced angina?:</label>
+                <select id="ninth" name="exang" required="required">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </p>
+            <p>
+                <label for="tenth">ST depression induced by exercise relative to rest:</label>
+                <input id="tenth" name="oldpeak" placeholder="Ex: 1.5" required="required">
+            </p>
+            <p>
+                <label for="eleventh">The slope of the peak exercise ST segment:</label>
+                <select id="eleventh" name="slope" required="required">
+                    <option value="0">Upsloping</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Downsloping</option>
+                </select>
+            </p>
+            <p>
+                <label for="twelfth">Number of major vessels colored by flourosopy:</label>
+                <select id="twelfth" name="ca" required="required">
+                    <option value="0">Zero</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </p>
+            <p>
+                <label for="thirteenth">Thalium Stress Test result:</label>
+                <select id="thirteenth" name="thal" required="required">
+                    <option value="1">Normal</option>
+                    <option value="2">Fixed defect</option>
+                    <option value="3">Reversable defect</option>
+                </select>
+            </p>
+            <button id="sub" type="submit">Predict</button>
+        </form>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a target =" _blank " href =" https://github.com/isaqueLira ">@isaqueLira</a></p>
+    </footer>
+</body>
+</html>
